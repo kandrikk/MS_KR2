@@ -5,3 +5,5 @@
 наследование, абстрактный класс, виртуальные функции, friend классы/функции
 
 Вероятно, с применением контейнера (std::vector, например)
+
+git repositories - https://github.com/kandrikk/MS_KR2.git
