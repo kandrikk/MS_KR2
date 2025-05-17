@@ -6,12 +6,14 @@
 class Box
 {
 private:
-    std::vector<int> infoBox = {0, 0, 0};
+    int len , width, high;
 
 public:
     Box(int len, int width, int high);
     ~Box();
     friend class FriendBox;
+    friend class VolumeBox;
+    friend void reconst(Box& box);
 };
 
 class FriendBox
@@ -19,3 +21,11 @@ class FriendBox
 public:
     void print(const Box& box);
 };
+
+class VolumeBox
+{
+public:
+    void volume(const Box& box);
+};
+
+void reconst(Box& box);

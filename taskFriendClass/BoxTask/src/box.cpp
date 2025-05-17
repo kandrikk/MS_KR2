@@ -1,17 +1,38 @@
-#include "box.h"
+#include "../include/box.h"
 
-Box::Box(int len, int width, int high)
+Box::Box(int l, int w, int h)
 {
-    infoBox = {len, width, high};
+    len = l;
+    width = w;
+    high = h;
 }
 
 
 Box::~Box()
 {
-    infoBox = {0, 0, 0};
+    len = 0;
+    width = 0;
+    high = 0;
 };
 
 void FriendBox::print(const Box& box)
 {
-    std::cout << box.infoBox[0] << std::endl;
+    std::cout << box.len << " " 
+    << box.width << " "  
+    << box.high 
+    << std::endl;
+}
+
+void VolumeBox::volume(const Box& box)
+{
+
+    int ob = box.len * box.high * box.width;
+    std::cout << ob << std::endl;
+}
+
+void reconst(Box& box)
+{
+    int x, y, z;
+    std::cout << "Стороны box -";
+    std::cin >> box.len >> box.width >> box.high;
 }

@@ -6,7 +6,8 @@ INCLUDE = -Iinclude
 $(TARGET):
 	$(GXX) -o $(TARGET) $(SRC) $(INCLUDE)
 
-run: $(TARGET)
+run: 
+	$(GXX) -o $(TARGET) $(SRC) $(INCLUDE)
 	./$(TARGET)
 
 clean:
